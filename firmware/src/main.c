@@ -4,6 +4,10 @@
 #include "gfx_mono_text.h"
 #include "sysfont.h"
 
+#define LED_PIO      PIOA
+#define LED_PIO_ID   ID_PIOA
+#define LED_IDX      0
+#define LED_IDX_MASK (1 << LED_IDX)
 
 #define BUZZER_PIO PIOC
 #define BUZZER_PIO_ID ID_PIOC
@@ -207,10 +211,12 @@ void melody_callback(void){
 
 void set_buzzer() {
 	pio_set(BUZZER_PIO, BUZZER_PIO_IDX_MASK);
+	pio_clear(LED_PIO, LED_IDX_MASK);
 }
 
 void clear_buzzer() {
 	pio_clear(BUZZER_PIO, BUZZER_PIO_IDX_MASK);
+	pio_set(LED_PIO, LED_IDX_MASK);
 }
 
 int get_startstop() {
@@ -247,8 +253,8 @@ void init(void) {
 	pmc_enable_periph_clk(BUZZER_PIO_ID);
 	pio_set_output(BUZZER_PIO, BUZZER_PIO_IDX_MASK, 0, 0, 0);
 	
-	
-	
+	pmc_enable_periph_clk(LED_PIO_ID);
+	pio_configure(LED_PIO, PIO_OUTPUT_1, LED_IDX_MASK, PIO_DEFAULT);
 	
 	pmc_enable_periph_clk(START_PIO_ID);
 	pio_set_input(START_PIO, START_PIO_IDX_MASK, PIO_DEFAULT);
