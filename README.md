@@ -1,4 +1,4 @@
-# 21a-emb-aps1
+# 22b-emb-aps1
 
 Embarcados - APS 1 - Musical!
 
@@ -26,7 +26,7 @@ TODO: Aualizar pinos
 
 ### Vídeo do projeto
 
-https://youtu.be/sN2HSMgNOUs
+
 
 ### Músicas e Direitos autorais
 
