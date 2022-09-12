@@ -26,7 +26,7 @@ TODO: Aualizar pinos
 
 ### Vídeo do projeto
 
-
+https://youtube.com/shorts/q7D6KnofOw8?feature=share
 
 ### Músicas e Direitos autorais
 
