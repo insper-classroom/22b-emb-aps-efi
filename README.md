@@ -1,4 +1,4 @@
-# 21a-emb-aps1
+# 22b-emb-aps1
 
 Embarcados - APS 1 - Musical!
 
@@ -16,18 +16,25 @@ TODO: Aualizar pinos
 
 | Função  | PINO (ex: PA11) |
 |---------|-----------------|
-| BUZZER  |                 |
-| START   |                 |
-| SELEÇÃO |                 |
+| BUZZER  |       PC13      |
+| START   |       PD28      |
+| SELEÇÃO |       PC31      |
 
 ### Imagem da montagem
 
-TODO: Inserir imagem do sistema montado
+![alt text](https://github.com/insper-classroom/22b-emb-aps-efi/blob/main/img.jpeg)
 
 ### Vídeo do projeto
 
-TODO: Inserir link para vídeo do projeto funcionando
+https://youtube.com/shorts/q7D6KnofOw8?feature=share
 
 ### Músicas e Direitos autorais
 
-TODO: Listar músicas e dar crédio da onde saiu:
+As músicas foram retiradas do seguinte repósitório git: https://github.com/robsoncouto/arduino-songs
+
+As músicas utilizadas foram:
+zeldaslullaby, imperialmarch e pinkpanther.
+
+### Como usar
+
+Conectar o pino positivo do buzzer na porta PC13, e o negativo no ground da placa. Conecte a placa OLED ao EXT1 da placa. Ao apertar o Button 1 da placa OLED, a música é pausada ou volta a tocar. Ao apertar o button 2, muda a música sendo tocada.
